@@ -1,0 +1,49 @@
+{
+  "name": "pf-domotica-arduino",
+  "version": "1.0.0",
+  "description": "API para el proyecto final de domótica.",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon src/server.js",
+    "start": "cross-env NODE_ENV=production node src/server.js",
+    "test": "cross-env NODE_ENV=text jest --verbose --silent",
+    "test:watch": "npm run test -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esacon/pf-domotica-arduino.git"
+  },
+  "keywords": [
+    "api",
+    "mongo",
+    "express",
+    "node",
+    "b2c",
+    "shopping"
+  ],
+  "author": "Enrique Niebles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/esacon/pf-domotica-arduino/issues"
+  },
+  "homepage": "https://github.com/esacon/pf-domotica-arduino#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.10",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "jest": "^28.1.0",
+    "supertest": "^6.2.3"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
