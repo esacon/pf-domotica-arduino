@@ -22,6 +22,8 @@ app.use((req, res, next) => {
 
 // Rutas
 app.use('/users', require('./routes/users.routes'));
+app.use('/commands', require('./routes/commands.routes'));
+
 
 const server = app.listen(PORT, async () => {
     await db_connection(process.env.DB_NAME);

@@ -59,7 +59,7 @@ const doRegister = async (req, res) => {
     });
     try {
         await user.save();
-        const token = generateAccessWebToken({ id: user._id, name: user.username, role: user.role });
+        const token = generateAccessWebToken({ id: user._id, username: user.username, role: user.role });
         return res.status(201).send({token});
     } catch (error) {
         return res.status(500).send(error);

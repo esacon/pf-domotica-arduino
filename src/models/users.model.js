@@ -18,6 +18,11 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
     trim: true,
+  },
+  alerts: {
+    type: [Object],
+    required: false,
+    default: []
   }
 });
 
