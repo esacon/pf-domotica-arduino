@@ -2,7 +2,7 @@ const path = require('path');
 
 require('dotenv').config({ path: path.resolve(__dirname, '../database/.env') });
 
-let data = "";
+let data;
 
 const postInfo = async (req, res) => {
     const { username, role } = req.user;
