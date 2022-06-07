@@ -12,12 +12,12 @@ const postInfo = async (req, res) => {
 
 const getCommands = async (req, res) => {
     const { username, role } = data;
-    if (!username || !role) return res.status(401).send({ error: "No user authenticated." });
+    if (!username || !role) return res.status(401).send({ error: "El usuario no está autenticado." });
     if (role === 'admin') {
         const commands = data;
         return res.status(200).send(commands);
     }
-    res.status(400).send({ error: 'User has not admin role.' });
+    res.status(400).send({ error: 'El usuario no tiene rol de administrador.' });
 }
 
 module.exports = {
